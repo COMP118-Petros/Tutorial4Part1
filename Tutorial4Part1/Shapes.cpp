@@ -24,6 +24,7 @@ void drawHorizontalLine(const int length, const char ch) {
 		cout << ch;
 
 	}
+	cout << endl;
 }
 /**
 * Function <code>drawVerticalLine<code> draws a vertical line according to the arguments.
@@ -78,4 +79,16 @@ void drawRectangle(const int height, const int length, const char ch) {
 		}
 		cout << endl;
 	}
+}
+/**
+* Function <code>menu<code> is the menu with the options that the user has.
+* <BR>
+*/
+void menu() {
+	cout << "1) Draw a horizontal line" << endl;
+	cout << "2) Draw a vertical line" << endl;
+	cout << "3) Draw a square" << endl;
+	cout << "4) Draw a rectangle" << endl;
+	cout << "5) Quit" << endl;
+	cout << "Enter your Option: ";
 }

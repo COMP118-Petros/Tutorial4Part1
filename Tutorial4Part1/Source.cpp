@@ -15,7 +15,65 @@
 using namespace std;
 
 int main() {
-	drawHorizontalLine(10, 'X');
-	return 0;
+	int option;
+	char symbol;
+	int len, height;
+
+	const int MAX_ARRAY = 10;
+
+	srand(time(NULL));
+
+	do {
+		menu();
+		cin >> option;
+		switch (option) {
+		case 1: //Horizontal Line
+			do {
+				cout << "Enter length (>0): " << endl;
+				cin >> len;
+
+			} while (len < 1);
+			cout << "Enter symbol: " << endl;
+			cin >> symbol;
+			drawHorizontalLine(len, symbol);
+			break;
+		case 2: //Vertical Line
+			do {
+				cout << "Enter length (>0): " << endl;
+				cin >> len;
+
+			} while (len < 1);
+			cout << "Enter symbol: " << endl;
+			cin >> symbol;
+			drawVerticalLine(len, symbol);
+			break;
+		case 3: //Square
+			do {
+				cout << "Enter length (>0): " << endl;
+				cin >> len;
+
+			} while (len < 2);
+			cout << "Enter symbol: " << endl;
+			cin >> symbol;
+			drawSquare(len, symbol);
+			break;
+		case 4: //Rectangle
+			do {
+				cout << "Enter height (>0): " << endl;
+				cin >> height;
+				cout << "Enter length (>0): " << endl;
+				cin >> len;
+
+			} while (len < 2);
+			cout << "Enter symbol: " << endl;
+			cin >> symbol;
+			drawRectangle(height, len, symbol);
+			break;
+		case 5: //Exit
+			break;
+		default:
+			cout << "Wrong choice!!" << endl;
+		}
+	} while (option != 5);
 
 }

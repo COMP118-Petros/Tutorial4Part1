@@ -13,6 +13,7 @@ void drawHorizontalLine(const int length, const char ch);
 void drawVerticalLine(const int height, const char ch);
 void drawSquare(const int size, const char ch);
 void drawRectangle(const int height, const int length, const char ch);
+void menu();
 
 #endif
 
